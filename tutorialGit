@@ -1,0 +1,33 @@
+1) 下载安装git：$ sudo apt-get install git
+2) 进入要git的文件夹: $ cd /dir 
+   仓库初始化: git init
+3) 查看库状态: git status
+   回显的红色文件代表此文件还未被Git所管理
+4) 将要git的文件添加到缓冲区：git add "yourdocument"
+   再次查看库状态：git status
+   回显的红色文件变为绿色，代表已被Git托管
+5) git commit -m "your description for this commit" 提交修改，
+   -m 所带的参数是本次提交信息，用来记录本次提交的主要意图。
+
+
+*** Please tell me who you are.
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+配置个人的用户名和电子邮件地址。
+每次 Git 提交时都会引用这两条信息，以说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录。
+%%%需要每个人注册一个git账号，用户名和邮件地址就是注册git时所用的那个。
+
+6) 在本地git仓库下运行：$ git remote add origin https://github.com/WiFiImaging/yourgitname.git
+   与gitgub创建的库建立关联。
+   %%%WiFiImaging 是我们项目组的github名称，yourgitname.git是我们建立的项目，以后的项目进程更新都推送到 .git
+7) 把本地库的所有内容推送到远程库上：$ git push -u origin master
+   由于远程库是空的，第一次推送时，加-u参数
+   从现在起，只要本地作了提交，就可以通过命令：$ git push origin master
+   %%%由于已经经历提交，因此以后可省略 -u
+   %%%使用git log可查看历史提交记录。
+8）提交时可能用到的信息：
+Username for 'https://github.com': WiFiImaging
+Password for 'https://WiFiImaging@github.com': wifi635
+
+
+
